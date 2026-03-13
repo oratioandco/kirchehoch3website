@@ -339,16 +339,19 @@
             .kinetic-line {
                 display: block;
                 overflow: hidden;
+                padding: 0.1em 0;
             }
 
             .kinetic-line-inner {
                 display: block;
-                transform: translateY(50px);
+                font-family: "Playfair Display", "Times New Roman", Times, serif;
+                font-weight: 400;
+                transform: translateY(100%);
                 text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
                 opacity: 0;
             }
 
-            .kinetic-line.italic {
+            .kinetic-line.italic .kinetic-line-inner {
                 font-style: italic;
                 color: var(--color-light);
                 text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
