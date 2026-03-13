@@ -90,17 +90,10 @@
 
             /* Animated Logo - inside hero content */
             .logo-wrapper {
-                margin: 0 auto 1.5rem;
+                margin: 0 auto clamp(1rem, 3vw, 2rem);
                 pointer-events: none;
                 color: var(--color-light);
-                width: min(40vw, 200px);
-            }
-
-            @media (min-width: 768px) {
-                .logo-wrapper {
-                    width: min(35vw, 280px);
-                    margin-bottom: 2rem;
-                }
+                width: clamp(100px, 25vw, 280px);
             }
 
             .logo-wrapper svg {
@@ -313,41 +306,16 @@
                 z-index: 20;
                 width: 100%;
                 position: relative;
-                padding-top: 20vh;
-            }
-
-            @media (min-width: 768px) {
-                .hero-content {
-                    padding-top: 16vh;
-                }
-            }
-
-            @media (min-width: 1024px) {
-                .hero-content {
-                    padding-top: 14vh;
-                }
+                padding-top: clamp(8vh, 12vh, 15vh);
             }
 
             .hero h1 {
                 font-family:
                     "Playfair Display", "Times New Roman", Times, serif;
-                font-size: 16vw;
+                font-size: clamp(2.5rem, 12vw, 9.5rem);
                 color: var(--color-light);
-                line-height: 1.1;
+                line-height: 1.05;
                 letter-spacing: -0.02em;
-            }
-
-            @media (min-width: 768px) {
-                .hero h1 {
-                    font-size: 8rem;
-                    line-height: 1;
-                }
-            }
-
-            @media (min-width: 1024px) {
-                .hero h1 {
-                    font-size: 9.5rem;
-                }
             }
 
             .kinetic-line {
@@ -377,18 +345,11 @@
                 font-weight: 500;
                 letter-spacing: 0.25em;
                 text-transform: uppercase;
-                font-size: 10px;
+                font-size: clamp(10px, 1.5vw, 12px);
                 color: rgba(255, 255, 255, 0.7);
-                margin-top: 2rem;
+                margin-top: clamp(1.5rem, 4vw, 3rem);
                 opacity: 0;
                 text-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
-            }
-
-            @media (min-width: 768px) {
-                .hero-subtitle {
-                    font-size: 0.75rem;
-                    margin-top: 3rem;
-                }
             }
 
             /* Scroll Indicator */
