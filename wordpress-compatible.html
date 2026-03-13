@@ -92,13 +92,25 @@
             .logo-wrapper {
                 position: absolute;
                 left: 50%;
-                top: 26vh;
+                top: 18vh;
                 z-index: 50;
                 transform: translateX(-50%);
                 transform-origin: top center;
                 pointer-events: none;
                 color: var(--color-light);
                 width: 220px;
+            }
+
+            @media (min-width: 768px) {
+                .logo-wrapper {
+                    top: 14vh;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .logo-wrapper {
+                    top: 12vh;
+                }
             }
 
             .logo-wrapper svg {
@@ -311,18 +323,18 @@
                 z-index: 20;
                 width: 100%;
                 position: relative;
-                padding-top: 24vh;
+                padding-top: 16vh;
             }
 
             @media (min-width: 768px) {
                 .hero-content {
-                    padding-top: 20vh;
+                    padding-top: 12vh;
                 }
             }
 
             @media (min-width: 1024px) {
                 .hero-content {
-                    padding-top: 18vh;
+                    padding-top: 12vh;
                 }
             }
 
@@ -351,7 +363,7 @@
             .kinetic-line {
                 display: block;
                 overflow: hidden;
-                padding: 0.03em 0 0.06em;
+                padding: 0.08em 0 0.15em;
             }
 
             .kinetic-line-inner {
