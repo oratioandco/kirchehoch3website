@@ -88,17 +88,19 @@
                 z-index: 9999;
             }
 
-            /* Animated Logo - scrolls with hero content */
+            /* Animated Logo - inside hero content */
             .logo-wrapper {
-                position: absolute;
-                left: 50%;
-                top: 26vh;
-                z-index: 50;
-                transform: translateX(-50%);
-                transform-origin: top center;
+                margin: 0 auto 1.5rem;
                 pointer-events: none;
                 color: var(--color-light);
-                width: 220px;
+                width: min(40vw, 200px);
+            }
+
+            @media (min-width: 768px) {
+                .logo-wrapper {
+                    width: min(35vw, 280px);
+                    margin-bottom: 2rem;
+                }
             }
 
             .logo-wrapper svg {
@@ -351,12 +353,13 @@
             .kinetic-line {
                 display: block;
                 overflow: hidden;
-                padding: 0.03em 0 0.06em;
+                padding: 0.08em 0 0.15em;
             }
 
             .kinetic-line-inner {
                 display: block;
-                font-family: "Playfair Display", "Times New Roman", Times, serif;
+                font-family:
+                    "Playfair Display", "Times New Roman", Times, serif;
                 font-weight: 400;
                 transform: translateY(100%);
                 text-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
@@ -899,28 +902,6 @@
         <!-- Global Film Grain Overlay -->
         <div class="global-grain"></div>
 
-        <!-- Floating & Shrinking Logo -->
-        <div class="logo-wrapper" id="logo">
-            <svg
-                viewBox="0 0 305 243"
-                xmlns="http://www.w3.org/2000/svg"
-                style="
-                    fill-rule: evenodd;
-                    clip-rule: evenodd;
-                    stroke-linejoin: round;
-                    stroke-miterlimit: 2;
-                "
-            >
-                <g>
-                    <path
-                        d="M199.122,78.944l99.276,-78.158c0.925,-0.607 1.993,-0.885 3.161,-0.754c2.751,0.807 2.921,1.301 3.108,3.848l0.043,234.315c-0.311,3.112 -1.026,3.579 -3.879,3.822l-60.364,-0.098c-0.258,0.05 -0.509,0.08 -0.742,0.097l-51.886,-0.11c-0.233,0.057 -0.477,0.094 -0.73,0.11l-183.314,-0.5c-2.736,-0.184 -4.66,-2.964 -3.398,-5.712l91.478,-169.549c1.264,-2.006 1.419,-2.168 3.927,-1.999c1.154,0.236 1.869,0.379 2.889,1.998l18.77,34.756l61.714,-70.984c0.852,-0.839 1.288,-1.599 3.773,-1.238c2.176,0.668 2.404,1.431 2.88,2.733l13.295,47.422Zm2.264,8.076l41.257,147.157l54.372,0.087l-0.2,-222.373l-95.428,75.129Zm-64.189,50.535l52.132,96.531l45.265,0.077l-39.798,-141.955l-57.599,45.347Zm-122.236,96.234l165.556,0.282l-49.497,-91.653l-116.059,91.371Zm18.691,-24.574l93.632,-73.714l-11.32,-20.961l-82.311,94.676Zm-9.853,-0.473l88.232,-101.485l-16.746,-31.008l-71.486,132.494Zm97.595,-100.449l12.067,22.344l59.071,-46.505l-12.224,-43.602l-58.914,67.763Z"
-                        fill="currentColor"
-                        fill-rule="nonzero"
-                    />
-                </g>
-            </svg>
-        </div>
-
         <!-- Fixed Header -->
         <header id="header">
             <!-- Header Logo (appears after hero logo scrolls out) -->
@@ -975,6 +956,26 @@
             </div>
 
             <div class="hero-content">
+                <div class="logo-wrapper" id="logo">
+                    <svg
+                        viewBox="0 0 305 243"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="
+                            fill-rule: evenodd;
+                            clip-rule: evenodd;
+                            stroke-linejoin: round;
+                            stroke-miterlimit: 2;
+                        "
+                    >
+                        <g>
+                            <path
+                                d="M199.122,78.944l99.276,-78.158c0.925,-0.607 1.993,-0.885 3.161,-0.754c2.751,0.807 2.921,1.301 3.108,3.848l0.043,234.315c-0.311,3.112 -1.026,3.579 -3.879,3.822l-60.364,-0.098c-0.258,0.05 -0.509,0.08 -0.742,0.097l-51.886,-0.11c-0.233,0.057 -0.477,0.094 -0.73,0.11l-183.314,-0.5c-2.736,-0.184 -4.66,-2.964 -3.398,-5.712l91.478,-169.549c1.264,-2.006 1.419,-2.168 3.927,-1.999c1.154,0.236 1.869,0.379 2.889,1.998l18.77,34.756l61.714,-70.984c0.852,-0.839 1.288,-1.599 3.773,-1.238c2.176,0.668 2.404,1.431 2.88,2.733l13.295,47.422Zm2.264,8.076l41.257,147.157l54.372,0.087l-0.2,-222.373l-95.428,75.129Zm-64.189,50.535l52.132,96.531l45.265,0.077l-39.798,-141.955l-57.599,45.347Zm-122.236,96.234l165.556,0.282l-49.497,-91.653l-116.059,91.371Zm18.691,-24.574l93.632,-73.714l-11.32,-20.961l-82.311,94.676Zm-9.853,-0.473l88.232,-101.485l-16.746,-31.008l-71.486,132.494Zm97.595,-100.449l12.067,22.344l59.071,-46.505l-12.224,-43.602l-58.914,67.763Z"
+                                fill="currentColor"
+                                fill-rule="nonzero"
+                            />
+                        </g>
+                    </svg>
+                </div>
                 <h1>
                     <span class="kinetic-line"
                         ><span class="kinetic-line-inner"
