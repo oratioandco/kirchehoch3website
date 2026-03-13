@@ -311,7 +311,19 @@
                 z-index: 20;
                 width: 100%;
                 position: relative;
-                padding-top: 36vh;
+                padding-top: 24vh;
+            }
+
+            @media (min-width: 768px) {
+                .hero-content {
+                    padding-top: 20vh;
+                }
+            }
+
+            @media (min-width: 1024px) {
+                .hero-content {
+                    padding-top: 18vh;
+                }
             }
 
             .hero h1 {
@@ -339,7 +351,7 @@
             .kinetic-line {
                 display: block;
                 overflow: hidden;
-                padding: 0.15em 0 0.2em;
+                padding: 0.03em 0 0.06em;
             }
 
             .kinetic-line-inner {
