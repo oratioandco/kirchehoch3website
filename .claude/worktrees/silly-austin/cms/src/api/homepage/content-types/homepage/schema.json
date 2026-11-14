@@ -1,0 +1,31 @@
+{
+  "kind": "singleType",
+  "collectionName": "homepage",
+  "info": {
+    "singularName": "homepage",
+    "pluralName": "homepages",
+    "displayName": "Homepage",
+    "description": "Content for the main homepage sections"
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "visionHeading": {
+      "type": "text"
+    },
+    "visionHeadingItalic": {
+      "type": "text"
+    },
+    "visionBody": {
+      "type": "richtext"
+    },
+    "gatheringsHeading": {
+      "type": "string"
+    },
+    "gatheringsBody": {
+      "type": "richtext"
+    }
+  }
+}

@@ -1,0 +1,17 @@
+# CMS dependencies and sensitive files
+cms/node_modules/
+cms/.env
+cms/.tmp/
+cms/.cache/
+cms/dist/
+cms/build/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/
+*.swp
+*.swo
